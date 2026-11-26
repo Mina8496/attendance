@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../../app/routes/app_routes.dart';
+import '../../../../core/routes/app_routes.dart';
 import '../cubit/auth_cubit.dart';
 import '../cubit/auth_state.dart';
 
@@ -80,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   TextButton(
                     onPressed: () =>
-                        Navigator.of(context).pushNamed(AppRoutes.register),
+                        GoRouter.of(context).push(AppRouter.kRegisterPage),
                     child: const Text('Create account'),
                   ),
                 ],
